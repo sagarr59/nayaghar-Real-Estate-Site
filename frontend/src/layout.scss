@@ -1,0 +1,26 @@
+@import "./responsive.scss";
+
+.layout {
+background-color: #f4c0c0;
+  height: 100vh;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include laptop {
+    background-color: rgb(193, 247, 193);
+    max-width: 80%;
+  }
+  
+    @include tablet {
+      background-color: rgb(229, 184, 191);
+      max-width: 90%;
+    }
+  @include phone {
+    background-color: rgb(232, 232, 186);
+    max-width: 100%;
+  }
+
+}

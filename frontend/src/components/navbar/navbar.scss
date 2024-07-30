@@ -1,0 +1,66 @@
+@import "../../responsive.scss";
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    transform: all 0.5s ease;
+
+    @include phone {
+      display: none;
+    }
+
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  .left {
+    background-color: antiquewhite;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    .logo {
+      font-weight: bold;
+      font-size: 30px;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      img {
+        width: 30px;
+      }
+
+      span {
+        @include tablet {
+          display: none;
+        }
+
+        @include phone {
+          display: initial;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: antiquewhite;
+    height: 100%;
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+    }
+
+    .signup {
+      background-color: lightgreen;
+    }
+  }
+}
