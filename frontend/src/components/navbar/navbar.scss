@@ -13,7 +13,7 @@ nav {
     }
 
     &:hover {
-      background-color: red;
+      scale: 1.1;
     }
   }
 
@@ -28,8 +28,8 @@ nav {
       font-weight: bold;
       font-size: 30px;
       display: flex;
-      gap: 15px;
       align-items: center;
+      gap: 15px;
 
       img {
         width: 30px;
@@ -54,6 +54,11 @@ nav {
     justify-content: flex-end;
     background-color: antiquewhite;
     height: 100%;
+
+    @include tablet {
+      background-color: transparent;
+    }
+
     a {
       padding: 12px 24px;
       margin: 20px;
@@ -61,6 +66,47 @@ nav {
 
     .signup {
       background-color: lightgreen;
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 999;
+
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+
+      @include phone {
+        display: inline;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+
+      &.open {
+        right: 0;
+      }
+
+      @include phone {
+        a {
+          display: initial;
+        }
+      }
     }
   }
 }
