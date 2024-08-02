@@ -18,7 +18,6 @@ nav {
   }
 
   .left {
-    background-color: antiquewhite;
     flex: 3;
     display: flex;
     align-items: center;
@@ -52,7 +51,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: antiquewhite;
+    background-color: #8da37f;
     height: 100%;
 
     @include tablet {
@@ -65,12 +64,12 @@ nav {
     }
 
     .signup {
-      background-color: lightgreen;
+      background-color: #C2B38D;
     }
 
     .menuIcon {
       display: none;
-      z-index: 999;
+      z-index: 2; //overlap
 
       img {
         width: 36px;
@@ -96,7 +95,7 @@ nav {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 25px;
+      font-size: 22px;
 
       &.open {
         right: 0;
