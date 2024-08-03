@@ -1,5 +1,7 @@
+import React from "react";
 import SearchBar from "../../components/searchBar/SearchBar";
 import "./homePage.scss";
+import CountUp from "react-countup";
 
 function HomePage() {
   return (
@@ -12,15 +14,22 @@ function HomePage() {
           <SearchBar />
           <div className="boxes">
             <div className="box">
-              <h1>50+</h1>
+              <h1>
+                <CountUp start={0} end={50} duration={2.5} />+
+              </h1>
               <h2>Happy Users</h2>
             </div>
             <div className="box">
-              <h1>50+</h1>
+              <h1>
+                <CountUp start={0} end={50} duration={2.5} />+
+              </h1>
               <h2>Listings Added</h2>
             </div>
             <div className="box">
-              <h1>24/7</h1>
+              <h1>
+                <CountUp start={0} end={24} duration={2.5} />
+                /7
+              </h1>
               <h2>Support Available</h2>
             </div>
           </div>

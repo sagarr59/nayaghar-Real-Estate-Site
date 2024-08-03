@@ -1,7 +1,7 @@
 @import "./responsive.scss";
 
 .layout {
-  background-color: #F0EDE3;
+  background-color: #f0ede3;
   height: 100vh;
   max-width: 1200px;
   margin-left: auto;
@@ -12,16 +12,16 @@
   flex-direction: column;
 
   @include laptop {
-    background-color: rgb(193, 247, 193);
+    background-color: #f0ede3;
     max-width: 80%;
   }
 
   @include tablet {
-    background-color: rgb(229, 184, 191);
+    background-color: #f0ede3;
     max-width: 90%;
   }
   @include phone {
-    background-color: rgb(232, 232, 186);
+    background-color: #f0ede3;
     max-width: 100%;
   }
 }
