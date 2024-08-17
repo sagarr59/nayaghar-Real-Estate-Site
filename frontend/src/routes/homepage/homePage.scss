@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .homePage {
   display: flex;
   height: 100%;
@@ -13,8 +15,24 @@
     gap: 50px;
     height: 100%;
 
+    @include laptop {
+      padding-right: 50px;
+    }
+
+    @include tablet {
+      padding: 0;
+    }
+
+    @include phone {
+      justify-content: flex-start;
+    }
+
     .title {
       font-size: 60px;
+
+      @include laptop {
+        font-size: 48px;
+      }
     }
     .boxes {
       display: flex;
@@ -22,6 +40,9 @@
 
       h1 {
         font-size: 36px;
+        @include laptop {
+          font-size: 32px;
+        }
       }
       h2 {
         font-size: 20px;
@@ -32,14 +53,22 @@
 }
 .imageContainer {
   flex: 2;
-  background-color: #8DA37F;
+  background-color: #8da37f;
   position: relative;
   display: flex;
   align-items: center;
+
+  @include tablet {
+    display: none;
+  }
 
   img {
     width: 120%;
     position: absolute;
     right: 0;
+
+    @include laptop {
+      width: 105%;
+    }
   }
 }

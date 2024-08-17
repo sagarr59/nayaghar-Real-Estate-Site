@@ -1,9 +1,8 @@
 @import "./responsive.scss";
 
 .layout {
-  background-color: #f0ede3;
   height: 100vh;
-  max-width: 1200px;
+  max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -12,20 +11,18 @@
   flex-direction: column;
 
   @include laptop {
-    background-color: #f0ede3;
-    max-width: 80%;
+    max-width: 1280px;
   }
 
   @include tablet {
-    background-color: #f0ede3;
-    max-width: 90%;
+    max-width: 768px;
   }
-  @include phone {
-    background-color: #f0ede3;
-    max-width: 100%;
-  }
-}
 
-.content {
-  flex: 1;
+  @include phone {
+    max-width: 640px;
+  }
+
+  .content {
+    flex: 1;
+  }
 }

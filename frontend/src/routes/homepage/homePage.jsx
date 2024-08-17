@@ -28,7 +28,7 @@ function HomePage() {
             <div className="box">
               <h1>
                 <CountUp start={0} end={24} duration={2.5} />
-                /7
+                /<CountUp start={0} end={7} duration={2.5} />
               </h1>
               <h2>Support Available</h2>
             </div>
