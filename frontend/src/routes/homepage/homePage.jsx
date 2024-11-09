@@ -8,8 +8,11 @@ function HomePage() {
     <div className="homePage">
       <div className="textContainer">
         <div className="wrapper">
-          <h1 className="title">Naya Ghar: अब Dream Home, एक Click मा</h1>
-          <p>Simplifying property searches and bookings in Nepal with detailed listings and effective communication</p>
+          <h1 className="title">Naya Ghar: अब Dream Home, केहि Click मै</h1>
+          <p>
+            Simplifying property searches and bookings in Nepal with detailed
+            listings and effective communication
+          </p>
 
           <SearchBar />
           <div className="boxes">
