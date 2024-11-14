@@ -16,10 +16,6 @@ function App() {
         },
         {
           path: "/list",
-          element: <HomePage />,
-        },
-        {
-          path: "/list",
           element: <ListPage />,
         },
         {
