@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 import "./navbar.scss";
 
 function Navbar() {
@@ -7,32 +8,32 @@ function Navbar() {
   return (
     <nav>
       <div className="left">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src="/favicon.png" alt="logo" />
           <span>NayaGhar</span>
-        </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/list">Listings</a>
+        </Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/contact">Contact Us</Link>
+        <Link to="/list">Listings</Link>
       </div>
       <div className="right">
-        <a href="/">Sign in</a>
-        <a href="/" className="signup">
+        <Link to="/signin">Sign in</Link>
+        <Link to="/signup" className="signup">
           Sign up
-        </a>
+        </Link>
 
         <div className="menuIcon" onClick={() => setOpen(!open)}>
           <img src="/menu.png" alt="menubar" />
         </div>
 
         <div className={open ? "menu open" : "menu"}>
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contact</a>
-          <a href="/">Listings</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/list">Listings</Link>
+          <Link to="/signin">Sign in</Link>
+          <Link to="/signup">Sign up</Link>
         </div>
       </div>
     </nav>

@@ -19,9 +19,9 @@
     }
   }
   .mapContainer {
-    flex: 1.8;
+    flex: 2;
     height: 100%;
-    background-color: #fcf5f3;
+    background-color: #8da37f;
 
     @include tablet {
       display: none;
