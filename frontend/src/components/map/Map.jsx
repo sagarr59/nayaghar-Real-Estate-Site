@@ -4,14 +4,16 @@ import "leaflet/dist/leaflet.css";
 import Pin from "../pin/Pin";
 
 function Map({ items }) {
+  const validItems = Array.isArray(items) ? items : [];
+
   return (
     <MapContainer
       center={
-        items.length === 1
-          ? [items[0].latitude, items[0].longitude]
-          : [27.700769, 85.30014] // Nepal's center coordinates
+        validItems.length === 1
+          ? [validItems[0].latitude, validItems[0].longitude]
+          : [27.700769, 85.30014]
       }
-      zoom={7} // Suitable zoom level for viewing Nepal
+      zoom={7}
       scrollWheelZoom={false}
       className="map"
     >
@@ -19,7 +21,7 @@ function Map({ items }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {items.map((item) => (
+      {validItems.map((item) => (
         <Pin item={item} key={item.id} />
       ))}
     </MapContainer>
