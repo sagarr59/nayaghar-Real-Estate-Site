@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import SearchBar from "../../components/searchBar/SearchBar";
 import "./homePage.scss";
 import CountUp from "react-countup";
+import { AuthContext } from "../../context/AuthContext";
 
 function HomePage() {
+  const { currentUser } = useContext(AuthContext);
   return (
     <div className="homePage">
       <div className="textContainer">
