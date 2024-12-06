@@ -13,6 +13,7 @@ import {
   profilePageLoader,
   singlePageLoader,
 } from "./lib/loaders";
+import NearByListing from "./routes/nearByListing/nearByListing";
 
 function App() {
   const router = createBrowserRouter([
@@ -53,6 +54,10 @@ function App() {
           path: "/profile",
           element: <ProfilePage />,
           loader: profilePageLoader,
+        },
+        {
+          path: "/nearby",
+          element: <NearByListing />,
         },
         {
           path: "/profile/update",

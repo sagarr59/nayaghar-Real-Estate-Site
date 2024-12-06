@@ -12,7 +12,7 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("")
+    setError("");
     setIsLoading(true);
     const formData = new FormData(e.target);
 
@@ -48,7 +48,7 @@ function Register() {
         </form>
       </div>
       <div className="imgContainer">
-        <img src="/bg.png" alt="" />
+        <img src="/background.png.png" alt="" />
       </div>
     </div>
   );

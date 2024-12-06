@@ -1,14 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext, useState } from "react"; // Make sure to import useState and useContext from React
 import { AuthContext } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
-import "./navbar.scss";
+import "./navbar.scss"; // You can add your styles here
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
-  const [number, setNumber] = useState(0);
+  const [open, setOpen] = useState(false); // useState is now properly imported
   const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) fetch();
 
   return (
     <nav>
@@ -24,14 +21,19 @@ function Navbar() {
       </div>
       <div className="right">
         {currentUser ? (
-          <div className="user">
-            <img src={currentUser.avatar || "/noavatar.jpg"} alt="" />
-            <span>{currentUser.username}</span>
-            <Link to="/profile" className="profile">
-              {number > 0 && <div className="notification">{number}</div>}
-              <span>Profile</span>
+          <>
+            <div className="user">
+              <img src={currentUser.avatar || "/noavatar.jpg"} alt="" />
+              <span>{currentUser.username}</span>
+              <Link to="/profile" className="profile">
+                <span>Profile</span>
+              </Link>
+            </div>
+            {/* Add "Find Nearest" button */}
+            <Link to="/nearby" className="find-nearest-btn">
+              Find Nearest
             </Link>
-          </div>
+          </>
         ) : (
           <>
             <Link to="/login">Sign in</Link>
@@ -40,7 +42,6 @@ function Navbar() {
             </Link>
           </>
         )}
-
         <div className="menuIcon" onClick={() => setOpen(!open)}>
           <img src="/menu.png" alt="menubar" />
         </div>

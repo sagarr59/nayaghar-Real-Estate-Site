@@ -1,0 +1,21 @@
+/* NearByListing.scss */
+.find-nearest-btn {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  padding: 12px 24px; /* Padding around the button */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove the border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+
+  &:hover {
+    background-color: #45a049; /* Darker green when hovered */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+
+  &:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    transform: scale(1); /* Reset scaling when clicked */
+  }
+}

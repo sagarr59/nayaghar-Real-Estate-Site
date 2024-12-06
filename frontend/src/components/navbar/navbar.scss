@@ -53,7 +53,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: #8da37f;
+    background-color: #edefe1;
     height: 100%;
 
     @include tablet {
@@ -150,5 +150,21 @@ nav {
         }
       }
     }
+  }
+}
+
+.find-nearest-btn {
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #45a049; /* Darker Green */
+    cursor: pointer;
   }
 }
